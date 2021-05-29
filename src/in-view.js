@@ -113,13 +113,11 @@ const inView = () => {
   };
 
   /**
-   * Destroy all event listener
+   * Clear history only for better reuse with SPA
    */
-  control.destroy = () => {
-    triggers.forEach((event) => removeEventListener(event, check));
-    if (window.MutationObserver) {
-      removeEventListener('DOMContentLoaded', observeMutation);
-    }
+  control.clearHistory = () => {
+    // Clear selector history and hope old ref would be clear by garbage collection
+    selectors = { history: [] };
   };
 
   /**

@@ -1,5 +1,16 @@
 # in-view.js :eyes:
 
+## Updates
+- [29 May 2021]
+    - I cannot destroy event listener b/c it is singleton
+    - So, I add ability to clear history instead for using it with SPA
+```js
+    // Clear history
+    inView.clearHistory();
+```
+
+---------
+
 Get notified when a DOM element enters or exits the viewport. A small (~1.9kb gzipped), dependency-free, javascript utility for IE9+.
 
 [camwiegert.github.io/in-view](https://camwiegert.github.io/in-view)
